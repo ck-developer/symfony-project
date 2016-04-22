@@ -1,0 +1,45 @@
+{% extends 'CkWebBundle:Layouts:default.html.twig' %}
+
+{% block page_title %}
+    Category list
+{% endblock %}
+
+{% block page_content %}
+    <div class="row">
+        <div class="col-md-8">
+            {{ knp_pagination_render(pagination, 'CkWebBundle:Pagination:default.html.twig') }}
+            Found total {{ pagination.getTotalItemCount }} Categories
+        </div>
+        <div class="col-md-4">
+            <a href="{{ path('category_new') }}" class="btn btn-success pull-right">Add Category</a>
+        </div>
+    </div>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr class="primary">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Products</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in pagination %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.products|length }}</td>
+                <td>
+                    <a href="{{ path('category_show', { 'id': category.id }) }}" class="btn btn-sm btn-success">
+                        <i class="fa fa-search"></i>
+                    </a>
+
+                    <a href="{{ path('category_edit', { 'id': category.id }) }}" class="btn btn-sm btn-primary">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

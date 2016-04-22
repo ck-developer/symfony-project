@@ -1,0 +1,25 @@
+{% extends 'CkWebBundle:Layouts:default.html.twig' %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block page_title %}
+    Category creation
+{% endblock %}
+
+{% block page_content %}
+    <div class="container">
+        {{ form_start(form) }}
+        <div class="row">
+            {{ form_widget(form) }}
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{{ path('category_index') }}" class="btn btn-default">Back to the list</a>
+            </div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success">Create</button>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

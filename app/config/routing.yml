@@ -1,0 +1,15 @@
+ck_product:
+    resource: "@CkProductBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ck_web:
+    resource: "@CkWebBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ck_core:
+    resource: "@CkCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

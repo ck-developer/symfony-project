@@ -1,0 +1,41 @@
+{% extends 'CkWebBundle:Layouts:default.html.twig' %}
+
+{% block page_title %}
+    Tax
+{% endblock %}
+
+{% block page_content %}
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ tax.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ tax.name }}</td>
+            </tr>
+            <tr>
+                <th>Value</th>
+                <td>{{ tax.value }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if tax.createdAt %}{{ tax.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if tax.updatedAt %}{{ tax.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="{{ path('tax_index') }}" class="btn btn-default">Back to the list</a>
+            <a href="{{ path('tax_edit', { 'id': tax.id }) }}" class="btn btn-primary">Edit</a>
+            {{ form_start(delete_form, { attr: { style: 'display: inline-block' }}) }}
+            <button type="submit" class="btn btn-danger">Delete</button>
+            {{ form_end(delete_form) }}
+        </div>
+    </div>
+{% endblock %}

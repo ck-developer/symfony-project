@@ -1,0 +1,31 @@
+{% if pageCount > 1 %}
+Page
+            {% if previous is defined %}
+                <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}"
+                   class="btn btn-default prev" style="height: 39px; line-height: 16px;">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            {% else %}
+                <a href="javascript::" class="btn btn-default disabled" style="height: 39px; line-height: 16px;">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            {% endif %}
+            <form action="" method="get" style="width: 45px ! important; display: inline-block;">
+                <input name="page" class="pagination-panel-input form-control input-sm input-inline input-mini"
+                       maxlenght="5"
+                       type="text" value="{{ current }}">
+            </form>
+            {% if next is defined %}
+                <a href="{{ path(route, query|merge({(pageParameterName): next})) }}"
+                   class="btn btn-default default next" style="height: 39px; line-height: 16px;">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            {% else %}
+                <a href="javascript::" class="btn btn-default disabled" style="height: 39px; line-height: 16px;">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            {% endif %}
+            sur
+            {{ pageCount }}
+    <span class="seperator">|</span>
+{% endif %}
