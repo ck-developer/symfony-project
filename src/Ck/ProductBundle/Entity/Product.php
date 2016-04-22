@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the Smartparking package.
+ *
+ * (c) Claude Khedhiri <claude@khedhiri.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Ck\ProductBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
@@ -8,7 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * Product
+ * Product.
  *
  * @ORM\Table(name="ck_products")
  * @ORM\Entity(repositoryClass="Ck\ProductBundle\Repository\ProductRepository")
@@ -54,7 +63,7 @@ class Product
     private $description;
 
     /**
-     * @var boolean
+     * @var bool
      *
      * @ORM\Column(name="enabled", type="boolean", nullable=true)
      */
@@ -100,9 +109,9 @@ class Product
     }
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -110,9 +119,10 @@ class Product
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return Product
      */
     public function setName($name)
@@ -123,9 +133,9 @@ class Product
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -133,9 +143,10 @@ class Product
     }
 
     /**
-     * Set price
+     * Set price.
      *
      * @param float $price
+     *
      * @return Product
      */
     public function setPrice($price)
@@ -146,9 +157,9 @@ class Product
     }
 
     /**
-     * Get price
+     * Get price.
      *
-     * @return float 
+     * @return float
      */
     public function getPrice()
     {
@@ -156,9 +167,10 @@ class Product
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
+     *
      * @return Product
      */
     public function setDescription($description)
@@ -169,9 +181,9 @@ class Product
     }
 
     /**
-     * Get description
+     * Get description.
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -179,9 +191,10 @@ class Product
     }
 
     /**
-     * Set enabled
+     * Set enabled.
      *
-     * @param boolean $enabled
+     * @param bool $enabled
+     *
      * @return Product
      */
     public function setEnabled($enabled)
@@ -192,9 +205,9 @@ class Product
     }
 
     /**
-     * Is enabled
+     * Is enabled.
      *
-     * @return boolean
+     * @return bool
      */
     public function isEnabled()
     {
@@ -202,9 +215,10 @@ class Product
     }
 
     /**
-     * Set createdAt
+     * Set createdAt.
      *
      * @param \DateTime $createdAt
+     *
      * @return Product
      */
     public function setCreatedAt($createdAt)
@@ -215,9 +229,9 @@ class Product
     }
 
     /**
-     * Get createdAt
+     * Get createdAt.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -225,9 +239,10 @@ class Product
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt.
      *
      * @param \DateTime $updatedAt
+     *
      * @return Product
      */
     public function setUpdatedAt($updatedAt)
@@ -238,9 +253,9 @@ class Product
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -248,9 +263,9 @@ class Product
     }
 
     /**
-     * Get enabled
+     * Get enabled.
      *
-     * @return boolean 
+     * @return bool
      */
     public function getEnabled()
     {
@@ -258,9 +273,10 @@ class Product
     }
 
     /**
-     * Add categories
+     * Add categories.
      *
      * @param \Ck\ProductBundle\Entity\Category $categories
+     *
      * @return Product
      */
     public function addCategory(\Ck\ProductBundle\Entity\Category $categories)
@@ -271,7 +287,7 @@ class Product
     }
 
     /**
-     * Remove categories
+     * Remove categories.
      *
      * @param \Ck\ProductBundle\Entity\Category $categories
      */
@@ -281,9 +297,9 @@ class Product
     }
 
     /**
-     * Get categories
+     * Get categories.
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getCategories()
     {
@@ -291,9 +307,10 @@ class Product
     }
 
     /**
-     * Set tax
+     * Set tax.
      *
      * @param \Ck\ProductBundle\Entity\Tax $tax
+     *
      * @return Product
      */
     public function setTax(\Ck\ProductBundle\Entity\Tax $tax = null)
@@ -304,9 +321,9 @@ class Product
     }
 
     /**
-     * Get tax
+     * Get tax.
      *
-     * @return \Ck\ProductBundle\Entity\Tax 
+     * @return \Ck\ProductBundle\Entity\Tax
      */
     public function getTax()
     {

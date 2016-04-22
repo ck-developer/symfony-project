@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the Smartparking package.
+ *
+ * (c) Claude Khedhiri <claude@khedhiri.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Ck\ProductBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
@@ -7,7 +16,6 @@ use Ck\CoreBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Ck\ProductBundle\Entity\Tax;
-use Ck\ProductBundle\Form\TaxType;
 
 /**
  * Tax controller.

@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the Smartparking package.
+ *
+ * (c) Claude Khedhiri <claude@khedhiri.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Ck\ProductBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
@@ -8,7 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * Category
+ * Category.
  *
  * @ORM\Table(name="ck_categories")
  * @ORM\Entity(repositoryClass="Ck\ProductBundle\Repository\CategoryRepository")
@@ -64,9 +73,9 @@ class Category
     }
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -74,9 +83,10 @@ class Category
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return Category
      */
     public function setName($name)
@@ -87,9 +97,9 @@ class Category
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -97,9 +107,10 @@ class Category
     }
 
     /**
-     * Set createdAt
+     * Set createdAt.
      *
      * @param \DateTime $createdAt
+     *
      * @return Product
      */
     public function setCreatedAt($createdAt)
@@ -110,7 +121,7 @@ class Category
     }
 
     /**
-     * Get createdAt
+     * Get createdAt.
      *
      * @return \DateTime
      */
@@ -120,9 +131,10 @@ class Category
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt.
      *
      * @param \DateTime $updatedAt
+     *
      * @return Product
      */
     public function setUpdatedAt($updatedAt)
@@ -133,7 +145,7 @@ class Category
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt.
      *
      * @return \DateTime
      */
@@ -143,9 +155,10 @@ class Category
     }
 
     /**
-     * Add products
+     * Add products.
      *
      * @param \Ck\ProductBundle\Entity\Product $products
+     *
      * @return Category
      */
     public function addProduct(\Ck\ProductBundle\Entity\Product $products)
@@ -156,7 +169,7 @@ class Category
     }
 
     /**
-     * Remove products
+     * Remove products.
      *
      * @param \Ck\ProductBundle\Entity\Product $products
      */
@@ -166,9 +179,9 @@ class Category
     }
 
     /**
-     * Get products
+     * Get products.
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getProducts()
     {
