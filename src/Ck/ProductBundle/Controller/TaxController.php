@@ -71,7 +71,7 @@ class TaxController extends Controller
     {
         $deleteForm = $this->createDeleteForm($tax);
 
-        return $this->render('tax/show.html.twig', array(
+        return $this->render('CkProductBundle:Tax:show.html.twig', array(
             'tax' => $tax,
             'delete_form' => $deleteForm->createView(),
         ));

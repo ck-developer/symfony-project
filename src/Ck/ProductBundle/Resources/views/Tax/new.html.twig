@@ -1,16 +1,23 @@
-{% extends 'base.html.twig' %}
+{% extends 'CkWebBundle:Layouts:default.html.twig' %}
 
-{% block body %}
-    <h1>Tax creation</h1>
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
 
+{% block page_title %}
+    Tax creation
+{% endblock %}
+
+{% block page_content %}
     {{ form_start(form) }}
+    <div class="row">
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{{ path('tax_index') }}" class="btn btn-default">Back to the list</a>
+        </div>
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-success pull-right">Update</button>
+        </div>
+    </div>
     {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('tax_index') }}">Back to the list</a>
-        </li>
-    </ul>
 {% endblock %}

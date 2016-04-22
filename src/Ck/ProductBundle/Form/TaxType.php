@@ -17,8 +17,6 @@ class TaxType extends AbstractType
         $builder
             ->add('name')
             ->add('value')
-            ->add('createdAt', 'datetime')
-            ->add('updatedAt', 'datetime')
         ;
     }
     

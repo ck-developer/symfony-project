@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block page_content %}
-    <table>
+    <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -15,20 +15,24 @@
                 <th>Name</th>
                 <td>{{ category.name }}</td>
             </tr>
+            <tr>
+                <th>Created at</th>
+                <td>{% if category.createdAt %}{{ category.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updated at</th>
+                <td>{% if category.updatedAt %}{{ category.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('category_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('category_edit', { 'id': category.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="{{ path('category_index') }}" class="btn btn-default">Back to the list</a>
+            <a href="{{ path('category_edit', { 'id': category.id }) }}" class="btn btn-primary">Edit</a>
+            {{ form_start(delete_form, { attr: { style: 'display: inline-block' }}) }}
+            <button type="submit" class="btn btn-danger">Delete</button>
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}
