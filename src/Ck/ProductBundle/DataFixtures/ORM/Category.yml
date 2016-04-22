@@ -1,0 +1,3 @@
+Ck\ProductBundle\Entity\Category:
+    category_{1..20}:
+        name: <sentence(2)>

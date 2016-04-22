@@ -1,0 +1,26 @@
+{% extends 'CkWebBundle:Layouts:default.html.twig' %}
+
+{% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+
+{% block page_title %}
+    Product edit
+{% endblock %}
+
+{% block page_content %}
+    {{ form_start(edit_form) }}
+    <div class="row">
+        {{ form_widget(edit_form) }}
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{{ path('product_index') }}" class="btn btn-default">Back to the list</a>
+            {{ form_start(delete_form) }}
+            <button type="submit" class="btn btn-danger">Delete</button>
+            {{ form_end(delete_form) }}
+        </div>
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-success pull-right">Update</button>
+        </div>
+    </div>
+    {{ form_end(edit_form) }}
+{% endblock %}

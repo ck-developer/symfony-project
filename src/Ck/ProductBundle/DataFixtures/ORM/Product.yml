@@ -1,0 +1,6 @@
+Ck\ProductBundle\Entity\Product:
+    product_{1..20}:
+        name: <sentence(3)>
+        price: <randomNumber(3)>
+        description: <paragraph(3)>
+        enabled: <boolean()>

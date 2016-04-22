@@ -1,0 +1,4 @@
+Ck\ProductBundle\Entity\Tax:
+    tax_{1..4}:
+        name: <sentence(2)>
+        value: <randomNumber(2)>
