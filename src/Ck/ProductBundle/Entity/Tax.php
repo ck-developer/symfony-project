@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the Smartparking package.
+ *
+ * (c) Claude Khedhiri <claude@khedhiri.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Ck\ProductBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -7,7 +16,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * Tax
+ * Tax.
  *
  * @ORM\Table(name="ck_taxs")
  * @ORM\Entity(repositoryClass="Ck\ProductBundle\Repository\TaxRepository")
@@ -60,11 +69,10 @@ class Tax
      */
     private $updatedAt;
 
-
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -72,9 +80,10 @@ class Tax
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return Tax
      */
     public function setName($name)
@@ -85,9 +94,9 @@ class Tax
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -95,9 +104,10 @@ class Tax
     }
 
     /**
-     * Set value
+     * Set value.
      *
      * @param string $value
+     *
      * @return Tax
      */
     public function setValue($value)
@@ -108,9 +118,9 @@ class Tax
     }
 
     /**
-     * Get value
+     * Get value.
      *
-     * @return string 
+     * @return string
      */
     public function getValue()
     {
@@ -118,9 +128,10 @@ class Tax
     }
 
     /**
-     * Set createdAt
+     * Set createdAt.
      *
      * @param \DateTime $createdAt
+     *
      * @return Tax
      */
     public function setCreatedAt($createdAt)
@@ -131,9 +142,9 @@ class Tax
     }
 
     /**
-     * Get createdAt
+     * Get createdAt.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -141,9 +152,10 @@ class Tax
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt.
      *
      * @param \DateTime $updatedAt
+     *
      * @return Tax
      */
     public function setUpdatedAt($updatedAt)
@@ -154,16 +166,16 @@ class Tax
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
         return $this->updatedAt;
     }
     /**
-     * Constructor
+     * Constructor.
      */
     public function __construct()
     {
@@ -171,9 +183,10 @@ class Tax
     }
 
     /**
-     * Add products
+     * Add products.
      *
      * @param \Ck\ProductBundle\Entity\Product $products
+     *
      * @return Tax
      */
     public function addProduct(\Ck\ProductBundle\Entity\Product $products)
@@ -184,7 +197,7 @@ class Tax
     }
 
     /**
-     * Remove products
+     * Remove products.
      *
      * @param \Ck\ProductBundle\Entity\Product $products
      */
@@ -194,9 +207,9 @@ class Tax
     }
 
     /**
-     * Get products
+     * Get products.
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getProducts()
     {
